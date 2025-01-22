@@ -1,141 +1,41 @@
-# Library-management-system
-Project Description
-This is a Library Management System that allows users to manage books, authors, and members in a library. The system supports functionalities such as:
+# Library Management System
 
-Registering members.
-Adding, updating, and removing books.
-Borrowing and returning books.
-Searching for books based on title, author, or genre.
-Viewing borrow history and overdue books.
-It is a full-stack application built using Node.js, Express, and MySQL for the backend, providing RESTful APIs for managing the library system.
+## Project Description
+The Library Management System (LMS) is a web-based application that helps manage library operations such as managing books, authors, members, and their borrowing activities. The system is designed with a RESTful API that supports various CRUD operations for managing the library's resources and activities.
 
-Setup Instructions
-Prerequisites
-Node.js: You need to have Node.js installed on your system.
-MySQL: You need to have MySQL installed and running.
-Postman (optional for testing APIs): You can use Postman to test the API endpoints.
-Steps to Set Up Locally
-Clone the Repository:
+### Key Features:
+- **Member Management**: Register new members, view members, and get member details by ID.
+- **Book Management**: Add new books, update book details, remove books, and search books by title, author, and genre.
+- **Book Borrowing**: Borrow books, return books, and view borrow history.
+- **Search**: Search for books by title, author, and genre.
+- **Overdue Books**: Check overdue books for specific members.
+  
+This system is built using:
+- **Backend**: Node.js with Express
+- **Database**: MySQL
+- **Authentication**: JWT (JSON Web Token) for authentication and role-based access control.
 
-Clone this repository to your local machine:
-git clone https://github.com/ritikesh1234/Library-management-system.git
-cd Library-management-system
+## Setup Instructions
 
-Install Dependencies:
+### Prerequisites
+- **Node.js**: [Download and Install Node.js](https://nodejs.org/en/)
+- **MySQL**: [Download and Install MySQL](https://www.mysql.com/)
 
-Install the necessary dependencies:
-npm install
+### Steps to Set Up Locally
 
+1. **Clone the Repository**:
+   Clone the repository from GitHub to your local machine:
+   ```bash
+   git clone https://github.com/ritikesh1234/Library-management-system.git
+   cd Library-management-system
+2. **Install Dependencies**:
+   Install the necessary dependencies for the project:
+   ```bash
+   npm install
 
-Setup Database:
+This README includes:
+- Full setup instructions.
+- Sample API requests and responses.
+- License details.
 
-Make sure you have MySQL installed and create a database named library by running the SQL commands provided in the project.
-
-CREATE DATABASE library;
-USE library;
-
-CREATE TABLE authors (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    bio TEXT
-);
-
-CREATE TABLE books (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(255) NOT NULL,
-    author_id INT NOT NULL,
-    genre VARCHAR(50),
-    availability BOOLEAN DEFAULT TRUE,
-    FOREIGN KEY (author_id) REFERENCES authors(id)
-);
-
-CREATE TABLE members (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    contact_info VARCHAR(255)
-);
-
-CREATE TABLE borrow_history (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    book_id INT NOT NULL,
-    member_id INT NOT NULL,
-    borrow_date DATE NOT NULL,
-    return_date DATE,
-    return_status VARCHAR(255) DEFAULT 'borrowed',
-    FOREIGN KEY (book_id) REFERENCES books(id),
-    FOREIGN KEY (member_id) REFERENCES members(id)
-);
-
-Configure Environment:
-
-Create a .env file in the root directory to configure your database connection:
-
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=your_password
-DB_NAME=library
-
-Start the Application:
-
-Run the application:
-npm start
-
-Sample API Usage
-1. Register a New Member
-Endpoint: POST /api/members
-Request Body:{
-    "name": "John Doe",
-    "contact_info": "john.doe@example.com"
-}
-Response:{
-    "id": 1,
-    "name": "John Doe",
-    "contact_info": "john.doe@example.com"
-}
-. Add a New Book
-Endpoint: POST /api/books
-Request Body:{
-    "title": "Harry Potter and the Philosopher's Stone",
-    "author_id": 1,
-    "genre": "Fantasy"
-}
-Response: {
-    "id": 1,
-    "title": "Harry Potter and the Philosopher's Stone",
-    "author_id": 1,
-    "genre": "Fantasy",
-    "availability": true
-}
-Borrow a Book
-Endpoint: POST /api/borrow
-Request Body:{
-    "member_id": 1,
-    "book_id": 1,
-    "return_deadline": "2025-02-01"
-}
-Response: {
-    "message": "Book borrowed successfully."
-}
-Search Books by Title
-Endpoint: GET /api/books/search?title=Harry
-Response:[
-    {
-        "id": 1,
-        "title": "Harry Potter and the Philosopher's Stone",
-        "author_id": 1,
-        "genre": "Fantasy",
-        "availability": true
-    }
-]
-Get Borrow History
-Endpoint: GET /api/borrow/:member_id
-Response:[
-    {
-        "id": 1,
-        "book_id": 1,
-        "member_id": 1,
-        "borrow_date": "2025-01-22",
-        "return_date": null,
-        "return_status": "borrowed"
-    }
-]
+This should give you a comprehensive guide for using your library management system and setting it up locally.
