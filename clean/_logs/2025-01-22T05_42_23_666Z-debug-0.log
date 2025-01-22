@@ -1,0 +1,44 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Users\ritik\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.8.2
+2 info using node@v20.15.0
+3 silly config load:file:C:\Users\ritik\AppData\Roaming\npm\node_modules\npm\npmrc
+4 silly config load:file:C:\lms\.npmrc
+5 silly config load:file:C:\Users\ritik\.npmrc
+6 silly config load:file:C:\Users\ritik\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install node-cron
+8 verbose argv "install" "node-cron"
+9 verbose logfile logs-max:10 dir:C:\lms\clean\_logs\2025-01-22T05_42_23_666Z-
+10 verbose logfile C:\lms\clean\_logs\2025-01-22T05_42_23_666Z-debug-0.log
+11 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+12 silly logfile done cleaning log files
+13 silly idealTree buildDeps
+14 silly fetch manifest node-cron@*
+15 silly packumentCache full:https://registry.npmjs.org/node-cron cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/node-cron 1781ms (cache miss)
+17 silly packumentCache full:https://registry.npmjs.org/node-cron set size:undefined disposed:false
+18 silly placeDep ROOT node-cron@3.0.3 OK for:  want: *
+19 silly fetch manifest uuid@8.3.2
+20 silly packumentCache full:https://registry.npmjs.org/uuid cache-miss
+21 http fetch GET 200 https://registry.npmjs.org/uuid 530ms (cache miss)
+22 silly packumentCache full:https://registry.npmjs.org/uuid set size:undefined disposed:false
+23 silly placeDep ROOT uuid@8.3.2 OK for: node-cron@3.0.3 want: 8.3.2
+24 silly reify moves {}
+25 silly audit bulk request {
+25 silly audit   nodemailer: [ '6.9.16' ],
+25 silly audit   'node-cron': [ '3.0.3' ],
+25 silly audit   uuid: [ '8.3.2' ]
+25 silly audit }
+26 silly tarball no local data for uuid@https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz. Extracting by manifest.
+27 silly tarball no local data for node-cron@https://registry.npmjs.org/node-cron/-/node-cron-3.0.3.tgz. Extracting by manifest.
+28 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 547ms
+29 silly audit report {}
+30 http fetch GET 200 https://registry.npmjs.org/node-cron/-/node-cron-3.0.3.tgz 955ms (cache miss)
+31 http fetch GET 200 https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz 985ms (cache miss)
+32 silly ADD node_modules/uuid
+33 silly ADD node_modules/node-cron
+34 verbose cwd C:\lms
+35 verbose os Windows_NT 10.0.22631
+36 verbose node v20.15.0
+37 verbose npm  v10.8.2
+38 verbose exit 0
+39 info ok

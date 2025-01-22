@@ -1,0 +1,35 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Users\ritik\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.8.2
+2 info using node@v20.15.0
+3 silly config load:file:C:\Users\ritik\AppData\Roaming\npm\node_modules\npm\npmrc
+4 silly config load:file:C:\lms\.npmrc
+5 silly config load:file:C:\Users\ritik\.npmrc
+6 silly config load:file:C:\Users\ritik\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install nodemailer
+8 verbose argv "install" "nodemailer"
+9 verbose logfile logs-max:10 dir:C:\lms\clean\_logs\2025-01-22T05_41_21_286Z-
+10 verbose logfile C:\lms\clean\_logs\2025-01-22T05_41_21_286Z-debug-0.log
+11 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+12 silly logfile done cleaning log files
+13 silly idealTree buildDeps
+14 silly fetch manifest nodemailer@*
+15 silly packumentCache full:https://registry.npmjs.org/nodemailer cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/nodemailer 839ms (cache miss)
+17 silly packumentCache full:https://registry.npmjs.org/nodemailer set size:undefined disposed:false
+18 silly placeDep ROOT nodemailer@6.9.16 OK for:  want: *
+19 silly reify moves {}
+20 silly tarball no local data for nodemailer@https://registry.npmjs.org/nodemailer/-/nodemailer-6.9.16.tgz. Extracting by manifest.
+21 http fetch GET 200 https://registry.npmjs.org/npm 1022ms
+22 http fetch GET 200 https://registry.npmjs.org/nodemailer/-/nodemailer-6.9.16.tgz 314ms (cache miss)
+23 silly ADD node_modules/nodemailer
+24 verbose cwd C:\lms
+25 verbose os Windows_NT 10.0.22631
+26 verbose node v20.15.0
+27 verbose npm  v10.8.2
+28 notice
+28 notice New [31mmajor[39m version of npm available! [31m10.8.2[39m -> [34m11.0.0[39m
+28 notice Changelog: [34mhttps://github.com/npm/cli/releases/tag/v11.0.0[39m
+28 notice To update run: [4mnpm install -g npm@11.0.0[24m
+28 notice  { force: true, [Symbol(proc-log.meta)]: true }
+29 verbose exit 0
+30 info ok
